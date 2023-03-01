@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 1491006807
+    locked: 0
+  - name: BG2
+    uniqueID: 3892747251
+    locked: 0
+  - name: Platform
+    uniqueID: 1961739971
+    locked: 0
+  - name: PLayer
+    uniqueID: 3184661637
+    locked: 0
