@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 7f;
     CapsuleCollider2D pColl;
     [SerializeField] float climbSpeed = 5f;
+    BoxCollider2D pBColl;
     float playerGravAtStart;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         pAnim = GetComponent<Animator>();
         playerGravAtStart = rb.gravityScale;
+        pBColl = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnJump(InputValue value){
-        if(!pColl.IsTouchingLayers(LayerMask.GetMask("Ground"))){ return; }
+        if(!pBColl.IsTouchingLayers(LayerMask.GetMask("Ground"))){ return; }
         if(value.isPressed){
             rb.velocity += new Vector2 (0f, jumpSpeed);
         }
@@ -59,8 +61,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void ClimbLadder(){
-        if(!pColl.IsTouchingLayers(LayerMask.GetMask("Climbing"))){
+        if(!pBColl.IsTouchingLayers(LayerMask.GetMask("Climbing"))){
             rb.gravityScale = playerGravAtStart;
+            pAnim.SetBool("isClimbing", false);
             return;
         }
 
