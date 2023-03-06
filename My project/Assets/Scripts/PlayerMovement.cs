@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
         pAnim = GetComponent<Animator>();
         playerGravAtStart = rb.gravityScale;
         pBColl = GetComponent<BoxCollider2D>();
-        tmCollider.enabled = true;
+       // tmCollider.enabled = true;
+        Physics2D.IgnoreLayerCollision(LayerMask.GetMask("Player") , LayerMask.GetMask("Ground"), false);
     }
 
     // Update is called once per frame
@@ -94,7 +95,8 @@ public class PlayerMovement : MonoBehaviour
         if(pColl.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
             isAlive = false;
             pAnim.SetTrigger("Dead");
-            tmCollider.enabled = false;
+          //  tmCollider.enabled = false;
+            Physics2D.IgnoreLayerCollision(LayerMask.GetMask("Player") , LayerMask.GetMask("Ground"), false);
         }
     }
 }
