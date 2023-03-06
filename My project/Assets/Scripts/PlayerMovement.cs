@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float climbSpeed = 5f;
     BoxCollider2D pBColl;
     float playerGravAtStart;
+    bool isAlive = true;
+    [SerializeField] TilemapCollider2D tmCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,21 +25,32 @@ public class PlayerMovement : MonoBehaviour
         pAnim = GetComponent<Animator>();
         playerGravAtStart = rb.gravityScale;
         pBColl = GetComponent<BoxCollider2D>();
+        tmCollider.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!isAlive){
+            return;
+        }
         Run();
         FlipSprite();
         ClimbLadder();
+        OnHit();
     }
 
     void OnMove(InputValue value){
+        if(!isAlive){
+            return;
+        }
         moveInput = value.Get<Vector2>();
     }
 
     void OnJump(InputValue value){
+        if(!isAlive){
+            return;
+        }
         if(!pBColl.IsTouchingLayers(LayerMask.GetMask("Ground"))){ return; }
         if(value.isPressed){
             rb.velocity += new Vector2 (0f, jumpSpeed);
@@ -74,5 +88,13 @@ public class PlayerMovement : MonoBehaviour
         if(Mathf.Abs(rb.velocity.y) > Mathf.Epsilon && !pColl.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             pAnim.SetBool("isClimbing", true);
         } else pAnim.SetBool("isClimbing", false);
+    }
+
+    void OnHit(){
+        if(pColl.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
+            isAlive = false;
+            pAnim.SetTrigger("Dead");
+            tmCollider.enabled = false;
+        }
     }
 }

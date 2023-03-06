@@ -168,7 +168,9 @@ GameObject:
   - component: {fileID: 404144935}
   - component: {fileID: 404144937}
   - component: {fileID: 404144936}
-  m_Layer: 0
+  - component: {fileID: 404144938}
+  - component: {fileID: 404144939}
+  m_Layer: 11
   m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404144933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.86, y: -1.71, z: -0.114290684}
+  m_LocalPosition: {x: -4.85, y: -1.737, z: -0.114290684}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -289,6 +291,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &404144938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404144933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fca5b2c33d0942b5af72ffb1e4d5e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+--- !u!70 &404144939
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404144933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24169815, y: -0.31400305}
+  m_Size: {x: 0.026603699, y: 0.33284128}
+  m_Direction: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +586,7 @@ GameObject:
   - component: {fileID: 720093030}
   - component: {fileID: 720093032}
   - component: {fileID: 720093031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BGUpperTMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50096,6 +50127,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1294689752885100619, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: lm.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: tmCollider
+      value: 
+      objectReference: {fileID: 1010987425}
+    - target: {fileID: 7046783334514643010, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7046783334514643021, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -50143,6 +50190,10 @@ PrefabInstance:
     - target: {fileID: 7046783334514643023, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
       propertyPath: m_Name
       value: PlayerCthulhu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046783334514643023, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
