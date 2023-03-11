@@ -50132,6 +50132,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: tm
+      value: 
+      objectReference: {fileID: 1010987424}
+    - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
       propertyPath: lm.m_Bits
       value: 0
       objectReference: {fileID: 0}
