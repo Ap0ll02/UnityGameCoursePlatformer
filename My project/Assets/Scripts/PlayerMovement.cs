@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     float playerGravAtStart;
     bool isAlive = true;
     [SerializeField] TilemapCollider2D tmCollider;
+    [SerializeField] GameObject mc;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             pAnim.SetTrigger("Dead");
             tmCollider.enabled = false;
+            mc.SetActive(false);
         }
     }
 }
