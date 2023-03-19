@@ -17,7 +17,7 @@ TagManager:
   - BG
   - PowerUps
   - Enemy
-  - 
+  - Hazards
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Climbing
     uniqueID: 2303001355
+    locked: 0
+  - name: Hazards
+    uniqueID: 1886402177
     locked: 0
   - name: Enemy
     uniqueID: 3260145277

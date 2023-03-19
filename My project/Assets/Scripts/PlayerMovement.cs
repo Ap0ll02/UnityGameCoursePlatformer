@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnHit(){
-        if(pColl.IsTouchingLayers(LayerMask.GetMask("Enemy"))){
+        if(pColl.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")) || transform.position.y < -6){
             isAlive = false;
             pAnim.SetTrigger("Dead");
             tmCollider.enabled = false;
