@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     bool isAlive = true;
     [SerializeField] TilemapCollider2D tmCollider;
     [SerializeField] GameObject mc;
+    [SerializeField] GameObject fireball;
+    [SerializeField] Transform gun;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite();
         ClimbLadder();
         OnHit();
+    }
+
+    void OnFire(InputValue value){
+        if(!isAlive){return;}
+        Instantiate(fireball, gun.position, transform.rotation);
     }
 
     void OnMove(InputValue value){

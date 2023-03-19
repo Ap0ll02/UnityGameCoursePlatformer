@@ -52280,6 +52280,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 149658215697710918, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.33
+      objectReference: {fileID: 0}
     - target: {fileID: 1294689752885100619, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -52292,6 +52296,14 @@ PrefabInstance:
       propertyPath: tm
       value: 
       objectReference: {fileID: 1010987424}
+    - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 7046783333225431755}
+    - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+      propertyPath: fireball
+      value: 
+      objectReference: {fileID: 7834549095579675509, guid: 0fb58ed2522c249cea868b2d2f320995, type: 3}
     - target: {fileID: 5783404455889741336, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
       propertyPath: lm.m_Bits
       value: 0
@@ -52358,6 +52370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+--- !u!4 &7046783333225431755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 149658215697710918, guid: 116a90da3051a49fab8c1c725a0f6bdd, type: 3}
+  m_PrefabInstance: {fileID: 7046783333225431754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7570006331334073836
 PrefabInstance:
   m_ObjectHideFlags: 0
