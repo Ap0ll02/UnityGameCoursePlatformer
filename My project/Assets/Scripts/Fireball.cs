@@ -19,11 +19,11 @@ public class Fireball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Enemy"){
-            Destroy(other.gameObject);
+            GameObject.Destroy(other.gameObject);
         }
-        Destroy(gameObject);
-    }
-    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.tag == "OOB"){
+            Destroy(gameObject);
+        }
         Destroy(gameObject);
     }
 }

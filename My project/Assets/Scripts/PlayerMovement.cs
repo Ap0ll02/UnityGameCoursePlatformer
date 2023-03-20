@@ -58,7 +58,9 @@ public class PlayerMovement : MonoBehaviour
         if(!isAlive){
             return;
         }
-        if(!pBColl.IsTouchingLayers(LayerMask.GetMask("Ground"))){ return; }
+        if(!pBColl.IsTouchingLayers(LayerMask.GetMask("Ground"))){
+            return; 
+        }
         if(value.isPressed){
             rb.velocity += new Vector2 (0f, jumpSpeed);
         }
