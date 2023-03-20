@@ -6,7 +6,7 @@ public class Fireball : MonoBehaviour
 {
     Rigidbody2D rb;
     PlayerMovement player;
-    [SerializeField] float fSpeed = 17f;
+    [SerializeField] float fSpeed = 7f;
     float xSpeed;
     private void Start() {
         rb = GetComponent<Rigidbody2D>();

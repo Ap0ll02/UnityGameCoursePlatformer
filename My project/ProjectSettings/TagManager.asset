@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - OOB
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Projectile
   - OOB
   - Win
-  - 
-  - 
+  - Locked
+  - Interactable
   - 
   - 
   - 
@@ -61,9 +62,15 @@ TagManager:
   - name: Hazards
     uniqueID: 1886402177
     locked: 0
+  - name: Key
+    uniqueID: 2067317823
+    locked: 0
   - name: Enemy
     uniqueID: 3260145277
     locked: 0
   - name: PLayer
     uniqueID: 3184661637
+    locked: 0
+  - name: Locked
+    uniqueID: 1505491323
     locked: 0

@@ -105,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
             pAnim.SetTrigger("Dead");
             tmCollider.enabled = false;
             mc.SetActive(false);
+            StartCoroutine(FindObjectOfType<GameSession>().ProcessPlayerDeath());
         }
     }
 }
