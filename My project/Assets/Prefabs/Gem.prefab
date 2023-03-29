@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAud: {fileID: 8300000, guid: 45e0e449bba9b46408543a718bed9d38, type: 3}
-  cam: {fileID: 2682862859995186488, guid: dbb0aff57cc4443bdb94ce52be52bbdc, type: 3}
+  scoreText: {fileID: 0}
 --- !u!82 &8787281085152148454
 AudioSource:
   m_ObjectHideFlags: 0

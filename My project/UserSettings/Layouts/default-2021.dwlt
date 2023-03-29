@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4297
+  controlID: 136
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimatorControllerTool
+  m_Name: AnimationWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -296,13 +296,13 @@ MonoBehaviour:
     height: 398
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -454,18 +454,18 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 72d0fdfff2ecfdff92effdff4cf3fdff240bfeff300ffeffd812feffac21feffc233feffbc35feff143efeff3a40feff8644feff8c4ffeff0a59feffde62feffde6cfeff506ffeff527ffeff5e7ffeff5c8dfeff5e96feffb298feffceacfeffc0ddfeff0c1fffffb8cdffffd2cffffff0d1ffff8ad8ffff0cfbfffff4ffffff62610000b087000090b00000acbc000064c40000acd50000c6d5000090ea0000
+      m_ExpandedIDs: daa1ffff3ea3ffffeaa3ffff34a4fffff0a8ffff00abffff66acffff42afffffd8b1ffffdab1ffff66e0ffff8ee1ffff36e4fffffcf0ffff32f1ffffeefaffff0afbffff0cfbffff189000004290000098c10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Gem
-        m_OriginalName: Gem
+        m_Name: Gem (12)
+        m_OriginalName: Gem (12)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -160140
+        m_UserData: -7952
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -758,9 +758,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.62388897, y: -1.5758507, z: -2.9791508}
+    m_Target: {x: 20.044271, y: 6.3530703, z: -0.27944195}
     speed: 2
-    m_Value: {x: -0.62388897, y: -1.5758507, z: -2.9791508}
+    m_Value: {x: 21.082832, y: 6.774763, z: -0.28702098}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -811,9 +811,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 0.72429115
+    m_Target: 16.970924
     speed: 2
-    m_Value: 0.72429115
+    m_Value: 17.728832
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -879,22 +879,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 58
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 58
   m_LastProjectPath: /Volumes/apollocode/code/UnityGameCoursePlatformer/My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec680000
-    m_LastClickedID: 26860
-    m_ExpandedIDs: 00000000b0680000e468000000ca9a3bffffff7f
+    m_SelectedIDs: 226b0000
+    m_LastClickedID: 27426
+    m_ExpandedIDs: 00000000fa6a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -922,7 +922,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b0680000
+    m_ExpandedIDs: 00000000fa6a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1073,14 +1073,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.69933856
+    - e00: 0.371875
       e01: 0
       e02: 0
-      e03: 25.802011
+      e03: 0.125
       e10: 0
-      e11: 0.69933856
+      e11: 0.371875
       e12: 0
-      e13: 87.08277
+      e13: 135.53125
       e20: 0
       e21: 0
       e22: 1
@@ -1096,7 +1096,7 @@ MonoBehaviour:
       e10: 0
       e11: 0.37578946
       e12: 0
-      e13: 133.30002
+      e13: 133.3
       e20: 0
       e21: 0
       e22: 1
@@ -1151,7 +1151,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -170894
+  m_LastSelectedObjectID: -20882
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

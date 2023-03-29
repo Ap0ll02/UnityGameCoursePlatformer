@@ -18,9 +18,13 @@ public class Fireball : MonoBehaviour
         rb.velocity = new Vector2 (xSpeed, 0f);
     }
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Enemy"){
-            GameObject.Destroy(other.gameObject);
+        if (other.tag == "Enemy" && FindObjectOfType<EnemyMOvement>().eHealth > 0)
+        {
+            FindObjectOfType<EnemyMOvement>().eHealth -= 1;
+
         }
+        else if(other.CompareTag("Enemy") && FindObjectOfType<EnemyMOvement>().eHealth < 1) { GameObject.Destroy(other.gameObject); }
+
         if(other.tag == "OOB"){
             Destroy(gameObject);
         }
